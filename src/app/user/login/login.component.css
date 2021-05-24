@@ -24,4 +24,8 @@ select.form-control {
     box-shadow: none;
 }
 
-
+#n1{
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+}

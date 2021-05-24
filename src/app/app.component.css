@@ -5,10 +5,9 @@ h1 {
 }
 
 .navbar{
-    background-color: bisque;
-    text-decoration-color: black;
+    background-color: rgba(0, 132, 255, 0.863);
+    text-decoration-color: cornsilk;
 }
-ul{
-    padding-top: 10px;
-    padding-bottom: 10px;
+.nav-link dropdown-toggle{
+    text-decoration: black;
 }
