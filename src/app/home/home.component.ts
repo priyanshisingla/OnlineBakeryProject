@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { products } from '../products';
-import { PRODUCT } from '../product-info';
+
 
 @Component({
   selector: 'app-home',
@@ -9,7 +8,6 @@ import { PRODUCT } from '../product-info';
 })
 export class HomeComponent implements OnInit {
 
-  Product = PRODUCT;
 
   constructor() { }
 
