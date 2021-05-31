@@ -17,7 +17,7 @@
                                 <i class="bi bi-person-circle text-muted"></i>
                             </span>
                         </div>
-                        <input id="firstName" type="text" name="firstname" placeholder="First Name" class="form-control bg-white border-left-0 border-md">
+                        <input id="firstName" type="text" name="firstname" placeholder="First Name" class="form-control bg-white border-left-0 border-md" required>
                     </div>
 
                     <!-- Last Name -->
@@ -27,7 +27,7 @@
                                 <i class="bi bi-person-circle text-muted"></i>
                             </span>
                         </div>
-                        <input id="lastName" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white border-left-0 border-md">
+                        <input id="lastName" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white border-left-0 border-md" required>
                     </div>
 
                     <!-- Email Address -->
@@ -37,7 +37,7 @@
                                 <i class="bi bi-envelope-fill text-muted"></i>
                             </span>
                         </div>
-                        <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
+                        <input id="email" type="email" #email placeholder="Email Address" class="form-control bg-white border-left-0 border-md" required>
                     </div>
 
                     <!-- Phone Number -->
@@ -47,10 +47,7 @@
                                 <i class="bi bi-telephone-fill text-muted"></i>
                             </span>
                         </div>
-                        <select id="countryCode" name="countryCode" style="max-width: 80px" class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
-                            <option value="">+91</option>
-                        </select>
-                        <input id="phoneNumber" type="tel" name="phone" placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3">
+                        <input id="phoneNumber" type="tel" name="phone" placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3" required>
                     </div>
                 
                     <!-- Password -->
@@ -60,7 +57,7 @@
                                 <i class="bi bi-lock-fill text-muted"></i>
                             </span>
                         </div>
-                        <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">
+                        <input id="password" type="password" #password placeholder="Password" class="form-control bg-white border-left-0 border-md" required>
                     </div>
 
                     <!-- Password Confirmation -->
@@ -70,14 +67,13 @@
                                 <i class="bi bi-lock-fill text-muted"></i>
                             </span>
                         </div>
-                        <input id="passwordConfirmation" type="password" name="passwordConfirmation" placeholder="Confirm Password" class="form-control bg-white border-left-0 border-md">
+                        <input id="passwordConfirmation" type="password" #passwordConfirmation placeholder="Confirm Password" class="form-control bg-white border-left-0 border-md" required>
                     </div>
                 
                     <!-- Submit Button -->
                     <div class="form-group col-lg-3 mx-auto mb-0">
-                        <a href="#" class="btn btn-primary btn-block py-2">
-                            <span class="font-weight-bold">Sign Up</span>
-                        </a>
+                        <!--<a href="#" class="btn btn-primary btn-block py-2">-->
+                            <button type="button" value="Log In" (click)="authService.SignUp(email.value, password.value)" class="btn btn-primary">Sign Up</button>
                     </div>
 
                     <!-- Divider Text -->
