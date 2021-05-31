@@ -37,6 +37,13 @@ img{
 
 }
 
+img:hover,
+img:focus{
+    width: 270px;
+    height: 270px;
+    opacity: 0.5;
+}
+
 .product-bottom .bi{
     color: #28a745;
     font-size: 10px;
@@ -52,6 +59,7 @@ img{
     font-size: 15px;
     padding-bottom: 10px;
 }
+
 
 .overlay{
     display: block;
