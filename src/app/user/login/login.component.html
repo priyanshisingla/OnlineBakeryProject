@@ -6,7 +6,7 @@
 
         <!-- Login Form -->
         <div class="col-md-7 col-lg-6 ml-auto">
-            <form action="#">
+            <form >
                 <div class="row">
 
                     <!-- Email Address -->
@@ -16,7 +16,7 @@
                                 <i class="bi bi-envelope-fill"></i>
                             </span>
                         </div>
-                        <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
+                        <input id="email" type="email" #email placeholder="Email Address" class="form-control bg-white border-left-0 border-md" required>
                     </div>
 
                     <!-- Password -->
@@ -26,18 +26,17 @@
                                 <i class="bi bi-lock-fill"></i>
                             </span>
                         </div>
-                        <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">
+                        <input id="password" type="password"  placeholder="Password" class="form-control bg-white border-left-0 border-md" #password required>
                     </div>
 
                     <!-- Submit Button -->
                     <div class="form-group col-lg-3 mx-auto mb-0">
-                        <a href="#" class="btn btn-primary btn-block py-2">
-                            <span class="font-weight-bold">Sign In</span>
-                        </a>
+                        <!--<a href="#" class="btn btn-primary btn-block py-2">-->
+                            <button type="button" value="Log In" (click)="authService.SignIn(email.value, password.value)" class="btn btn-primary">Sign In</button>
                     </div>
 
                     <!-- Divider Text -->
-                    <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                    <div class="formGroup col-lg-12 mx-auto d-flex align-items-center my-4">
                         <div class="border-bottom w-100 ml-5"></div>
                         <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
                         <div class="border-bottom w-100 mr-5"></div>
@@ -45,8 +44,8 @@
 
                     <!-- Don't have an account -->
                     <div class="text-center w-100">
-                        <p class="text-muted font-weight-bold">Don't have an account? <a class="text-center" href="register.component.html">Register</a>
-                            </p>
+                        <span class="text-muted font-weight-bold">Don't have an account? <a class="link" routerLink='/register' routerLinkActive="active">Register</a>
+                    </span>
                     </div>
                 </div>
             </form>
