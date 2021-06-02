@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { AuthService } from './auth.service';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,19 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
     TestimonialsComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     NgbModule,
     AppRoutingModule,
+ main
+    UserModule,
+    ToastrModule.forRoot()
     User,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
     FormsModule, ReactiveFormsModule
+ main
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [AuthService],

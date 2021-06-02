@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 
+
 const routes: Routes = [
   {path : '', component : HomeComponent},
   {path : 'login', component : LoginComponent},
